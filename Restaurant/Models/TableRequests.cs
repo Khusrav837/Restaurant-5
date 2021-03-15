@@ -7,7 +7,6 @@ namespace Restaurant.Models
 {
     public class TableRequests : IEnumerable
     {
-
         Dictionary<string, List<IMenuItem>> items = new Dictionary<string, List<IMenuItem>>();
 
         public void Add<OrderType>(string customerName)
@@ -29,18 +28,6 @@ namespace Restaurant.Models
         public void Clear()
         {
             items.Clear();
-        }
-
-        public List<IMenuItem> this[string customerName]
-        {
-            get
-            {
-                if (!items.ContainsKey(customerName))
-                {
-                    throw new Exception("This customer didn't give order!");
-                }
-                return this.items[customerName];
-            }
         }
 
         public List<IMenuItem> Get<OrderType>()

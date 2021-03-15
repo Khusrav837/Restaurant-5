@@ -1,6 +1,4 @@
-﻿
-
-using Restaurant.Moels;
+﻿using Restaurant.Moels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +14,9 @@ namespace Restaurant.Models
         private TableRequests tableRequests;
         Boolean sendedToCook = false;
         Boolean served = false;
+
+        //TODO: We need 2 Cooks
         Cook cook = new Cook();
-        //   public delegate void ReadyDelagate(TableRequests table);
-        //   public event ReadyDelagate Ready;
 
         public Server()
         {
@@ -73,6 +71,8 @@ namespace Restaurant.Models
         }
         public void Serve(Task task)
         {
+            //TODO: Why this method has 'task' parameter? Should we use it?
+            //TODO: This methos is too long. Can you make it small? The way to make it smaller is to use LINQ instead of 'foreach'...
             if (served)
             {
                 throw new Exception("Customers already served!");
