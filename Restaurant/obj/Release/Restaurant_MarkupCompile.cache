@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\GitRepos\CSharp training\Khusrav837\Restaurant-5\Restaurant\obj\Debug\
+C:\GitRepos\CSharp training\Khusrav837\Restaurant-5\Restaurant\obj\Release\
 Restaurant
 none
 false
-DEBUG;TRACE
+TRACE
 C:\GitRepos\CSharp training\Khusrav837\Restaurant-5\Restaurant\App.xaml
 11151548125
 

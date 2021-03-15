@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace Restaurant.Models
+﻿namespace Restaurant.Models
 {
     public interface IMenuItem
     {

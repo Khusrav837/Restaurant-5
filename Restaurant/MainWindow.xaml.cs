@@ -1,5 +1,4 @@
 ﻿using Restaurant.Models;
-using Restaurant.Moels;
 using System;
 using System.Windows;
 
@@ -17,9 +16,7 @@ namespace Restaurant
             drinks.Items.Add(Drinks.Tea);
             drinks.Items.Add(Drinks.Juice);
             drinks.Items.Add(Drinks.RC_Cola);
-            drinks.Items.Add(Drinks.Coca_Cola);
-           // server.Ready += cook.Process;
-          //  cook.Processed += (TableRequests table) => server.Processed(table);
+            drinks.Items.Add(Drinks.Coca_Cola);           
         }
         private void getOrder_Click(object sender, RoutedEventArgs e)
         {
@@ -72,23 +69,5 @@ namespace Restaurant
             }
             server.Clear();
         }
-
-       /* private void Serve_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                var resultOfCooks = server.Serve();
-                foreach (var result in resultOfCooks)
-                {
-                    Results.Items.Add(result);
-                }
-                Results.Items.Add("Please enjoy your food!");
-            }
-            catch (Exception ex)
-            {
-                Results.Items.Add(ex.Message);
-            }
-            server.Clear();
-        }*/
     }
 }
