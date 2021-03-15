@@ -15,8 +15,8 @@ namespace Restaurant.Models
         Boolean sendedToCook = false;
         Boolean served = false;
 
-        //TODO: We need 2 Cooks
-        Cook cook = new Cook();
+        Cook1 cook1 = new Cook1();
+        Cook2 cook2 = new Cook2();
 
         public Server()
         {
@@ -60,14 +60,29 @@ namespace Restaurant.Models
         }
         public List<string> SendToCook()
         {
-            sendedToCook = true;
-            Task processTask = new Task(() => cook.Process(tableRequests));
-            processTask.Start();
-            Thread.Sleep(3000);
-            Task serveTask = processTask.ContinueWith(Serve);
-            Thread.Sleep(3000);
-            serveTask.Wait();
-            return resultOfCooks;
+            if (!cook1.l)
+            {
+                sendedToCook = true;
+                Task processTask = new Task(() => cook1.Process(tableRequests));
+                processTask.Start();
+                Thread.Sleep(3000);
+                Task serveTask = processTask.ContinueWith(Serve);
+                Thread.Sleep(3000);
+                serveTask.Wait();
+                return resultOfCooks;
+            }
+            else if (cook2.l)
+            {
+                sendedToCook = true;
+                Task processTask = new Task(() => cook2.Process(tableRequests));
+                processTask.Start();
+                Thread.Sleep(3000);
+                Task serveTask = processTask.ContinueWith(Serve);
+                Thread.Sleep(3000);
+                serveTask.Wait();
+                return resultOfCooks;
+            }
+            throw new Exception("All coocker are busy please wait!");
         }
         public void Serve(Task task)
         {
@@ -84,25 +99,9 @@ namespace Restaurant.Models
 
             foreach (KeyValuePair<string, List<IMenuItem>> row in tableRequests)
             {
-                var ch = 0;
-                var e = 0;
-                Type t = null;
-
-                foreach (IMenuItem value in row.Value)
-                {
-                    if (value is Chicken)
-                    {
-                        ch++;
-                    }
-                    else if (value is Egg)
-                    {
-                        e++;
-                    }
-                    else if (value is Drink)
-                    {
-                        t = value.GetType();
-                    }
-                }
+                int ch = row.Value.Count(r => r is Chicken);
+                int e = row.Value.Count(r => r is Egg);
+                Type t = row.Value.Where(r => r is Drink).First().GetType();
 
                 var str = $"Customer {row.Key} is served {ch} chicken, {e} egg, ";
 
