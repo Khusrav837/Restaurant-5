@@ -104,3 +104,18 @@ F:\Restaurant 5\Restaurant\obj\Debug\Restaurant.g.resources
 F:\Restaurant 5\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
 F:\Restaurant 5\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.cache
 F:\Restaurant 5\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\bin\Debug\Restaurant.exe.config
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\bin\Debug\Restaurant.exe
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\bin\Debug\Restaurant.pdb
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant.csprojAssemblyReference.cache
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\MainWindow.g.cs
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\App.g.cs
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant_MarkupCompile.cache
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant_MarkupCompile.lref
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\MainWindow.baml
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant.g.resources
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.cache
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant.exe
+C:\GitHubRepos\CSharpTraining\Khusrav837\Restaurant-5\Restaurant\obj\Debug\Restaurant.pdb

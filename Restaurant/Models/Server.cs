@@ -15,6 +15,7 @@ namespace Restaurant.Models
         Boolean sendedToCook = false;
         Boolean served = false;
 
+        //TODO: Here should be list of cooks. new List<Cook> {cook1, cook2}
         Cook1 cook1 = new Cook1();
         Cook2 cook2 = new Cook2();
 
@@ -24,6 +25,7 @@ namespace Restaurant.Models
             tableRequests = new TableRequests();
         }
  
+        //TODO: I received order from a customer and sent it. Then I want to receive 2nd order but UI blocked.
         public void Receive(string customerName, int chickenQuantity, int eggQuantity, object drink)
         {
             foreach (var _ in Enumerable.Range(1, chickenQuantity))
@@ -59,7 +61,7 @@ namespace Restaurant.Models
             sendedToCook = chickenQuantity > 0 || eggQuantity > 0 || drink != null;
         }
         public List<string> SendToCook()
-        {
+        {//TODO: Code duplication. If all cooks are busy it should wait for 1 second and try again.
             if (!cook1.l)
             {
                 sendedToCook = true;
@@ -84,10 +86,11 @@ namespace Restaurant.Models
             }
             throw new Exception("All coocker are busy please wait!");
         }
+
         public void Serve(Task task)
         {
             //TODO: Why this method has 'task' parameter? Should we use it?
-            //TODO: This methos is too long. Can you make it small? The way to make it smaller is to use LINQ instead of 'foreach'...
+            //TODO: This method is too long. Can you make it small? The way to make it smaller is to use LINQ instead of 'foreach'...
             if (served)
             {
                 throw new Exception("Customers already served!");
